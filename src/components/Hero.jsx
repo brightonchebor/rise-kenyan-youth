@@ -145,7 +145,7 @@ const Hero = () => {
                                     className="group bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 flex items-center justify-center"
                                 >
                                     <Play className="mr-2 h-5 w-5 text-blue-600" />
-                                    Watch Our Story
+                                    Donate Now
                                 </button>
                             </div>
 
