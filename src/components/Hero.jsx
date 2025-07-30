@@ -10,32 +10,51 @@ import {
   Heart
 } from 'lucide-react';
 import background from '../assets/background.jpg';
+import chebor from '../assets/chebor.jpg';
+import daniel from '../assets/daniel.jpg';
+import edwin from '../assets/edwin.jpg';
+import laureta from '../assets/laureta.jpg';
+import laurian from '../assets/laurian.jpg';
+import elizabeth from '../assets/elizabeth.jpg';
 
 const Hero = () => {
     const [currentStory, setCurrentStory] = useState(0);
-    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
     const successStories = [
         {
             text: "From struggling with basic literacy to becoming a software developer at a leading tech company!",
-            author: "Grace Wanjiku",
-            role: "Software Developer, Alumni 2022",
+            author: "Nasimiyu Elizabeth",
+            role: "University Student, Alumni 2022",
             program: "Technology Training Program",
-            avatar: "https://images.unsplash.com/photo-1494790108755-2616b612d5c1?w=60&h=60&fit=crop&crop=face"
+            avatar: elizabeth
         },
         {
             text: "The scholarship program changed my life completely. Now I'm pursuing engineering at university!",
-            author: "Michael Kipchoge",
-            role: "University Student, Alumni 2021",
+            author: "Edwin Sipupu",
+            role: "College Graduate, Alumni 2021",
             program: "Secondary Education Scholarship",
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
+            avatar: edwin
         },
         {
             text: "Thanks to the mentorship and support, I started my own business and employ 5 other youth!",
-            author: "Fatuma Hassan",
-            role: "Entrepreneur, Alumni 2020",
+            author: "Daniel Murunga",
+            role: "Producer, Alumni 2020",
             program: "Youth Development Program",
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face"
+            avatar: daniel
+        },
+        {
+            text: "I now integrate tech projects into my high‑school classrooms—sparking curiosity in 200+ students each year!",
+            author: "Laureta Nekesa",
+            role: "University Student, Alumni 2022",
+            program: "Youth Develpment Program",
+            avatar: laureta
+        },
+        {
+            text: "I went from teaching myself HTML on an old laptop to contributing to open‑source projects used worldwide!",
+            author: "Brighton Chebor",
+            role: "University Student, Alumni 2022",
+            program: "Technology Training Program",
+            avatar: chebor
         }
     ];
 
@@ -118,12 +137,11 @@ const Hero = () => {
                             {/* CTA Buttons */}
                             <div className="mt-10 flex flex-col sm:flex-row gap-4">
                                 <button className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                    Apply for Program
+                                    View Programs
                                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
                                 </button>
                                 
                                 <button 
-                                    onClick={() => setIsVideoPlaying(!isVideoPlaying)}
                                     className="group bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 flex items-center justify-center"
                                 >
                                     <Play className="mr-2 h-5 w-5 text-blue-600" />
@@ -142,13 +160,13 @@ const Hero = () => {
                                         ))}
                                     </div>
                                     <span className="ml-3 text-gray-600">
-                                        <span className="font-semibold text-gray-900">2,500+</span> lives transformed
+                                        <span className="font-semibold text-gray-900">100+</span> lives transformed
                                     </span>
                                 </div>
                                 <div className="flex items-center">
                                     <Heart className="w-5 h-5 text-red-500 mr-2" />
                                     <span className="text-gray-600">
-                                        <span className="font-semibold text-gray-900">500+</span> active donors
+                                        <span className="font-semibold text-gray-900">50+</span> active donors
                                     </span>
                                 </div>
                             </div>
@@ -160,21 +178,11 @@ const Hero = () => {
                             {/* Main Image/Video Container - Moved Up */}
                             <div className="relative">
                                 <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                                    {isVideoPlaying ? (
-                                        <div className="aspect-video bg-gray-900 flex items-center justify-center">
-                                            <div className="text-center text-white">
-                                                <Play className="w-16 h-16 mx-auto mb-4" />
-                                                <p className="text-lg font-medium">Our Impact Story</p>
-                                                <p className="text-sm text-gray-300">Documentary: Transforming Lives Through Education</p>
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <img 
-                                            src={background}
-                                            alt="Students in classroom learning technology" 
-                                            className="w-full h-auto"
-                                        />
-                                    )}
+                                    <img 
+                                        src={background}
+                                        alt="Students in classroom learning technology" 
+                                        className="w-full h-auto"
+                                    />
                                     
                                     {/* Floating Impact Cards */}
                                     <div className="absolute -top-4 -left-4 bg-white rounded-lg shadow-lg p-4 transform -rotate-3">
