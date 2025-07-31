@@ -55,13 +55,20 @@ const Hero = () => {
             role: "University Student, Alumni 2022",
             program: "Technology Training Program",
             avatar: chebor
+        },
+        {
+            text: "I went from learning scratch  on XO laptop to contributing to insipring children to learn tech!",
+            author: "Laurian Wekesa",
+            role: "University Student, Alumni 2022",
+            program: "Technology Training Program",
+            avatar: laurian
         }
     ];
 
     const impactStats = [
-        { number: "2,500+", label: "Students Supported", icon: Users },
+        { number: "100+", label: "Students Supported", icon: Users },
         { number: "89%", label: "Graduation Rate", icon: GraduationCap },
-        { number: "15", label: "Programs Running", icon: BookOpen },
+        { number: "4", label: "Programs Running", icon: BookOpen },
         { number: "98%", label: "Job Placement", icon: Trophy }
     ];
 
@@ -145,20 +152,13 @@ const Hero = () => {
                                     className="group bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 flex items-center justify-center"
                                 >
                                     <Play className="mr-2 h-5 w-5 text-blue-600" />
-                                    Donate Now
+                                    View Gallery
                                 </button>
                             </div>
 
                             {/* Community Impact */}
                             <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8">
                                 <div className="flex items-center">
-                                    <div className="flex -space-x-2">
-                                        {[1,2,3,4,5].map((i) => (
-                                            <div key={i} className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full border-2 border-white flex items-center justify-center">
-                                                <span className="text-white text-xs font-bold">{String.fromCharCode(64 + i)}</span>
-                                            </div>
-                                        ))}
-                                    </div>
                                     <span className="ml-3 text-gray-600">
                                         <span className="font-semibold text-gray-900">100+</span> lives transformed
                                     </span>
@@ -166,7 +166,7 @@ const Hero = () => {
                                 <div className="flex items-center">
                                     <Heart className="w-5 h-5 text-red-500 mr-2" />
                                     <span className="text-gray-600">
-                                        <span className="font-semibold text-gray-900">50+</span> active donors
+                                        <span className="font-semibold text-gray-900">10+</span> active donors
                                     </span>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@ const Hero = () => {
                                             <GraduationCap className="w-6 h-6 text-blue-500" />
                                             <div className="ml-2">
                                                 <div className="text-sm font-semibold">Graduates</div>
-                                                <div className="text-blue-600 font-bold">2,200+</div>
+                                                <div className="text-blue-600 font-bold">10+</div>
                                             </div>
                                         </div>
                                     </div>

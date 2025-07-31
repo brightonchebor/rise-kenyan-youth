@@ -10,6 +10,8 @@ import {
   MapPin,
   BookOpen
 } from 'lucide-react';
+import bukokholo1 from '../assets/bukokholo1.jpg';
+import bukokholo2 from '../assets/bukokholo2.jpg';
 
 const ProgramsSection = () => {
     const [activeProgram, setActiveProgram] = useState(0);
@@ -42,7 +44,7 @@ const ProgramsSection = () => {
                 'Community recommendation',
                 'Commitment to program requirements'
             ],
-            image: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=400&h=300&fit=crop'
+            image: bukokholo1
         },
         {
             id: 'secondary-scholarships',
@@ -71,7 +73,7 @@ const ProgramsSection = () => {
                 'Leadership potential',
                 'Community service commitment'
             ],
-            image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9d1?w=400&h=300&fit=crop'
+            image: bukokholo2
         },
         {
             id: 'tech-training',
@@ -100,7 +102,7 @@ const ProgramsSection = () => {
                 'Commitment to 6-month program',
                 'Post-training service agreement'
             ],
-            image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop'
+            image: bukokholo1
         },
         {
             id: 'youth-development',
@@ -119,7 +121,7 @@ const ProgramsSection = () => {
                 'Peer mentorship networks'
             ],
             stats: {
-                beneficiaries: '2,000+',
+                beneficiaries: '10+',
                 success_rate: '85%',
                 locations: '15 Centers'
             },
@@ -129,7 +131,7 @@ const ProgramsSection = () => {
                 'Regular participation commitment',
                 'Parent/guardian consent (minors)'
             ],
-            image: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=300&fit=crop'
+            image: bukokholo2
         }
     ];
 
@@ -282,7 +284,7 @@ const ProgramsSection = () => {
                                 {/* Action Buttons */}
                                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                                     <button className={`flex-1 bg-gradient-to-r ${currentProgram.color} hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center`}>
-                                        Apply for Program
+                                        View all Programs
                                         <ArrowRight className="ml-2 h-5 w-5" />
                                     </button>
                                     <button className="flex-1 bg-white border-2 border-gray-200 hover:border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
@@ -307,13 +309,10 @@ const ProgramsSection = () => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
-                                <BookOpen className="mr-2 h-5 w-5" />
-                                View All Applications
-                            </button>
-                            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
                                 <Heart className="mr-2 h-5 w-5" />
-                                Become a Sponsor
+                                Donate Now
                             </button>
+                            
                         </div>
                     </div>
                 </div>
