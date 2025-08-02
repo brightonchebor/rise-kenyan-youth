@@ -1,24 +1,20 @@
+// src/components/Navbar.jsx (Updated)
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Heart, Users, BookOpen, Phone } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const location = useLocation();
 
     const navigation = [
-        { name: 'Home', href: '#', current: true },
-        { name: 'About Us', href: '#about' },
-        { name: 'Programs', href: '#programs', hasDropdown: true },
-        { name: 'Success Stories', href: '#stories' },
-        { name: 'Gallery', href: '#gallery' },
-    ];
-
-    const dropdownItems = [
-        { name: 'Primary Education Support', href: '#primary-education' },
-        { name: 'Secondary Scholarships', href: '#secondary-scholarships' },
-        { name: 'Technology Training', href: '#tech-training' },
-        { name: 'Youth Development', href: '#youth-development' },
+        { name: 'Home', href: '/', current: location.pathname === '/' },
+        { name: 'About Us', href: '/about', current: location.pathname === '/about' },
+        { name: 'Programs', href: '/programs', current: location.pathname === '/programs'},
+        { name: 'Success Stories', href: '/success-stories', current: location.pathname === '/success-stories' },
+        { name: 'Gallery', href: '/gallery', current: location.pathname === '/gallery' },
     ];
 
     return (
@@ -28,12 +24,16 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
-                            <img src={logo} alt="logo" className="w-18 h-18 object-contain"/>
+                            <Link to="/">
+                                <img src={logo} alt="logo" className="w-18 h-18 object-contain"/>
+                            </Link>
                         </div>
                         <div className="ml-3">
-                            <h1 className="text-xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
-                                Rise Kenyan Youth
-                            </h1>
+                            <Link to="/">
+                                <h1 className="text-xl font-bold bg-blue-600 bg-clip-text text-transparent">
+                                    Rise Kenyan Youth
+                                </h1>
+                            </Link>
                         </div>
                     </div>
 
@@ -42,47 +42,15 @@ const Navbar = () => {
                         <div className="ml-10 flex items-baseline space-x-8">
                             {navigation.map((item) => (
                                 <div key={item.name} className="relative">
-                                    {item.hasDropdown ? (
-                                        <div className="relative">
-                                            <button
-                                                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                                                className={`${item.current
-                                                        ? 'text-indigo-600 border-b-2 border-indigo-500'
-                                                        : 'text-slate-700 hover:text-indigo-600 hover:bg-indigo-50'
-                                                    } px-3 py-2 rounded-lg text-sm font-medium flex items-center transition-all duration-300 ease-in-out`}
-                                            >
-                                                {item.name}
-                                                <ChevronDown className="ml-1 h-4 w-4" />
-                                            </button>
-
-                                            {/* Dropdown Menu */}
-                                            {isDropdownOpen && (
-                                                <div className="absolute top-full left-0 mt-1 w-56 bg-white/95 backdrop-blur-sm rounded-xl shadow-xl border border-indigo-100 z-50">
-                                                    <div className="py-2">
-                                                        {dropdownItems.map((dropItem) => (
-                                                            <a
-                                                                key={dropItem.name}
-                                                                href={dropItem.href}
-                                                                className="block px-4 py-2 text-sm text-slate-700 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 hover:text-indigo-700 transition-all duration-200 mx-2 rounded-lg"
-                                                            >
-                                                                {dropItem.name}
-                                                            </a>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    ) : (
-                                        <a
-                                            href={item.href}
-                                            className={`${item.current
-                                                    ? 'text-indigo-600 border-b-2 border-indigo-500'
-                                                    : 'text-slate-700 hover:text-indigo-600 hover:bg-indigo-50'
-                                                } px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ease-in-out`}
-                                        >
-                                            {item.name}
-                                        </a>
-                                    )}
+                                    <Link
+                                        to={item.href}
+                                        className={`${item.current
+                                                ? 'text-indigo-600 border-b-2 border-indigo-500'
+                                                : 'text-slate-700 hover:text-indigo-600 hover:bg-indigo-50'
+                                            } px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ease-in-out`}
+                                    >
+                                        {item.name}
+                                    </Link>
                                 </div>
                             ))}
                         </div>
@@ -97,7 +65,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Donate Button */}
-                        <button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-2 rounded-xl text-sm font-medium transition-all duration-300 flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <button className="bg-blue-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-2 rounded-xl text-sm font-medium transition-all duration-300 flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                             <Heart className="h-4 w-4 mr-2" />
                             Donate Now
                         </button>
@@ -124,16 +92,17 @@ const Navbar = () => {
                 <div className="md:hidden">
                     <div className="px-4 pt-2 pb-3 space-y-2 bg-white/95 backdrop-blur-sm border-t border-indigo-100">
                         {navigation.map((item) => (
-                            <a
+                            <Link
                                 key={item.name}
-                                href={item.href}
+                                to={item.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className={`${item.current
                                         ? 'text-indigo-600 bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500'
                                         : 'text-slate-700 hover:text-indigo-600 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50'
                                     } block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200`}
                             >
                                 {item.name}
-                            </a>
+                            </Link>
                         ))}
 
                         {/* Mobile Actions */}
