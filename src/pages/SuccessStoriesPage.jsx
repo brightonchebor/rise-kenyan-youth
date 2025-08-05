@@ -369,9 +369,6 @@ const SuccessStoriesPage = () => {
                                         {/* Before Section */}
                                         <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
                                             <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center">
-                                                <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center mr-3">
-                                                    <span className="text-slate-600 font-bold">B</span>
-                                                </div>
                                                 Before the Program
                                             </h3>
                                             <blockquote className="text-slate-700 italic mb-4 text-sm leading-relaxed">
@@ -389,21 +386,18 @@ const SuccessStoriesPage = () => {
                                         </div>
 
                                         {/* After Section */}
-                                        <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-                                            <h3 className="text-lg font-bold text-blue-800 mb-4 flex items-center">
-                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-                                                    <span className="text-blue-600 font-bold">A</span>
-                                                </div>
+                                        <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                                            <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center">
                                                 After the Program
                                             </h3>
-                                            <blockquote className="text-blue-700 italic mb-4 text-sm leading-relaxed">
+                                            <blockquote className="text-slate-700 italic mb-4 text-sm leading-relaxed">
                                                 "{story.after.quote}"
                                             </blockquote>
                                             <div className="space-y-2">
-                                                <h4 className="font-semibold text-blue-800 text-sm mb-2">Key Achievements:</h4>
+                                                <h4 className="font-semibold text-slate-800 text-sm mb-2">Key Achievements:</h4>
                                                 {story.after.achievements.map((achievement, index) => (
-                                                    <div key={index} className="flex items-start text-sm text-blue-700">
-                                                        <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                                    <div key={index} className="flex items-start text-sm text-slate-700">
+                                                        <div className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                                                         <span>{achievement}</span>
                                                     </div>
                                                 ))}
