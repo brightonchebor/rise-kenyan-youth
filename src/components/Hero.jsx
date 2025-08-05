@@ -81,7 +81,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-blue-100 via-white to-blue-100 overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
