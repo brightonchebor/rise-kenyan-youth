@@ -275,37 +275,34 @@ const SuccessStoriesPage = () => {
 
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 py-20">
             {/* Hero Section */}
-            <div className="relative bg-blue-600 text-white py-12">
-            <div className="absolute inset-0 bg-black opacity-20"></div>
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
                     Success Stories
-                </h1>
-                <p className="text-lg md:text-xl mb-6 max-w-2xl mx-auto opacity-90">
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
                     Real transformations. Real impact. Real hope.
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-gray-600">
                     <div className="text-center">
-                        <div className="text-2xl md:text-3xl font-bold">2,500+</div>
+                        <div className="text-2xl md:text-3xl font-bold">100+</div>
                         <div className="text-xs md:text-sm opacity-80">Lives Transformed</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-2xl md:text-3xl font-bold">95%</div>
+                        <div className="text-2xl md:text-3xl font-bold">85%</div>
                         <div className="text-xs md:text-sm opacity-80">Success Rate</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-2xl md:text-3xl font-bold">10,000+</div>
-                        <div className="text-xs md:text-sm opacity-80">Community Impact</div>
+                        <div className="text-2xl md:text-3xl font-bold">10+</div>
+                        <div className="text-xs md:text-sm opacity-80">Graduates</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-2xl md:text-3xl font-bold">50+</div>
-                        <div className="text-xs md:text-sm opacity-80">Counties Reached</div>
+                        <div className="text-2xl md:text-3xl font-bold">10+</div>
+                        <div className="text-xs md:text-sm opacity-80">Active Donors</div>
                     </div>
                 </div>
-            </div>
-            </div>            
+            </div>          
 
             {/* Success Stories Grid */}
             <div className="py-16">
