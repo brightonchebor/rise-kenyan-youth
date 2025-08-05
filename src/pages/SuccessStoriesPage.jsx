@@ -65,8 +65,6 @@ const SuccessStoriesPage = () => {
             ],
             
             testimonial: "The Technology Training Program gave me more than just coding skills - it gave me confidence, a support network, and the belief that I could achieve anything. Today, I'm not just building software; I'm building bridges between technology and my community.",
-            
-            videoTestimonial: true,
             communityImpact: "Founded 'Code Queens' - a program that has trained 200+ girls in basic programming",
             skills: ["JavaScript", "React", "Python", "Mobile Development", "UI/UX Design"],
             awards: ["Outstanding Graduate 2022", "Young Innovator Award 2023", "Community Leader Recognition 2024"]
@@ -104,8 +102,6 @@ const SuccessStoriesPage = () => {
             ],
             
             testimonial: "The scholarship didn't just pay for my education; it invested in my dreams. Today, I'm not just an engineer - I'm creating sustainable solutions for my community while providing jobs for other young people.",
-            
-            videoTestimonial: false,
             communityImpact: "Provides free solar installations for schools and health centers in rural areas",
             skills: ["Mechanical Engineering", "Solar Technology", "Project Management", "Business Development", "Team Leadership"],
             awards: ["Best Engineering Student 2024", "Young Entrepreneur Award", "Green Innovation Prize"]
@@ -143,8 +139,6 @@ const SuccessStoriesPage = () => {
             ],
             
             testimonial: "This program showed me that every challenge is an opportunity in disguise. From unemployed youth to empowering hundreds of farmers - that's the power of believing in young people's potential.",
-            
-            videoTestimonial: true,
             communityImpact: "Improved food security for 5,000+ families through better farming practices",
             skills: ["Agricultural Science", "Cooperative Management", "Market Analysis", "Community Organizing", "Sustainable Farming"],
             awards: ["Rural Innovator Award 2023", "Community Impact Leader", "Sustainable Agriculture Champion"]
@@ -182,8 +176,6 @@ const SuccessStoriesPage = () => {
             ],
             
             testimonial: "The program taught me that education is not just about what you learn, but how you share that knowledge to lift others. Every student I reach is a multiplier of positive change.",
-            
-            videoTestimonial: false,
             communityImpact: "Established 'Digital Classrooms Initiative' reaching 15 rural schools",
             skills: ["Educational Technology", "Curriculum Development", "Teacher Training", "App Development", "Project Coordination"],
             awards: ["Educational Innovation Award", "Youth Leader in STEM", "Digital Inclusion Champion"]
@@ -221,8 +213,6 @@ const SuccessStoriesPage = () => {
             ],
             
             testimonial: "Open source taught me that coding isn't just about solving problems - it's about building solutions that can help people everywhere. The program connected me to this global community.",
-            
-            videoTestimonial: true,
             communityImpact: "Founded 'Code for Kenya' meetup, bringing together 500+ developers monthly",
             skills: ["JavaScript", "Python", "Open Source Development", "Community Building", "Technical Writing"],
             awards: ["Open Source Contributor Award", "GitHub Star", "Tech Community Leader"]
@@ -260,8 +250,6 @@ const SuccessStoriesPage = () => {
             ],
             
             testimonial: "The program taught me that technology is most powerful when it serves education. Every child I teach programming to could be the next innovator who changes the world.",
-            
-            videoTestimonial: false,
             communityImpact: "Established coding programs in 10 primary schools, teaching 500+ children basic programming",
             skills: ["Educational Game Development", "Scratch Programming", "Child Psychology", "Curriculum Design", "Research"],
             awards: ["Educational Innovation Prize", "Young Researcher Award", "Community Impact Recognition"]
@@ -276,7 +264,6 @@ const SuccessStoriesPage = () => {
         { id: 'Primary Education Support', name: 'Primary Education', count: successStories.filter(s => s.program === 'Primary Education Support').length }
     ];
 
-    const videoTestimonials = successStories.filter(story => story.videoTestimonial);
 
     const filteredStories = successStories.filter(story => {
         const matchesProgram = filterProgram === 'all' || story.program === filterProgram;
@@ -285,13 +272,6 @@ const SuccessStoriesPage = () => {
                              story.currentRole.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesProgram && matchesSearch;
     });
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentTestimonial((prev) => (prev + 1) % videoTestimonials.length);
-        }, 8000);
-        return () => clearInterval(interval);
-    }, []);
 
 
     return (
@@ -345,14 +325,6 @@ const SuccessStoriesPage = () => {
                                         <h3 className="font-bold text-lg">{story.name}</h3>
                                         <p className="text-sm opacity-90">{story.title}</p>
                                     </div>
-                                    {story.videoTestimonial && (
-                                        <div className="absolute top-4 right-4">
-                                            <div className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
-                                                <Play className="w-3 h-3 mr-1" />
-                                                Video
-                                            </div>
-                                        </div>
-                                    )}
                                 </div>
 
                                 {/* Story Card Content */}
