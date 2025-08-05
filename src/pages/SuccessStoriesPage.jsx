@@ -36,8 +36,6 @@ const SuccessStoriesPage = () => {
             id: 1,
             name: "Nasimiyu Elizabeth",
             title: "Software Developer & University Student",
-            program: "Technology Training Program",
-            graduationYear: "2022",
             location: "Nairobi, Kenya",
             avatar: elizabeth,
             coverImage: elizabeth,
@@ -305,94 +303,149 @@ const SuccessStoriesPage = () => {
             </div>          
 
             {/* Success Stories Grid */}
-            <div className="py-16">
+            <div className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="space-y-12">
                         {filteredStories.map((story) => (
-                            <div key={story.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                                {/* Story Card Header */}
-                                <div className="relative h-48">
-                                    <img 
-                                        src={story.avatar} 
-                                        alt={story.name}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                                    <div className="absolute bottom-4 left-4 right-4 text-white">
-                                        <h3 className="font-bold text-lg">{story.name}</h3>
-                                        <p className="text-sm opacity-90">{story.title}</p>
+                            <div key={story.id} className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                                {/* Hero Section */}
+                                <div className="relative bg-gradient-to-r from-slate-50 to-white py-16 px-8">
+                                    <div className="max-w-6xl mx-auto">
+                                        <div className="flex items-center gap-12 lg:gap-16">
+                                            {/* Large Image on Left */}
+                                            <div className="flex-shrink-0">
+                                                <img
+                                                    src={story.coverImage || story.avatar}
+                                                    alt={story.name}
+                                                    className="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl object-cover shadow-2xl border border-gray-200"
+                                                />
+                                            </div>
+
+                                            {/* Content on Right */}
+                                            <div className="flex-1">
+                                                <div className="space-y-6">
+                                                    <div>
+                                                        <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+                                                            {story.name}
+                                                        </h2>
+                                                        <p className="text-2xl lg:text-3xl text-blue-600 font-medium mb-6">
+                                                            {story.title}
+                                                        </p>
+                                                    </div>
+
+                                                    <div className="flex flex-col gap-4 text-lg text-gray-600">
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="p-2 bg-blue-100 rounded-lg">
+                                                                <MapPin className="w-6 h-6 text-blue-600" />
+                                                            </div>
+                                                            <span className="font-medium">{story.location}</span>
+                                                        </div>
+
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="p-2 bg-blue-100 rounded-lg">
+                                                                <Briefcase className="w-6 h-6 text-blue-600" />
+                                                            </div>
+                                                            <span className="font-medium">{story.currentRole}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                {/* Story Card Content */}
-                                <div className="p-6">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
-                                            {story.program}
-                                        </span>
-                                        <span className="text-gray-500 text-sm">Alumni {story.graduationYear}</span>
-                                    </div>
-
-                                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                                        {story.after.quote}
-                                    </p>
-
-                                    <div className="space-y-3 mb-6">
-                                        <div className="flex items-center text-sm text-gray-600">
-                                            <MapPin className="w-4 h-4 mr-2 text-gray-400" />
-                                            {story.location}
+                                {/* Content Section */}
+                                <div className="p-8">
+                                    {/* Journey Overview */}
+                                    <div className="grid lg:grid-cols-2 gap-8 mb-8">
+                                        {/* Before Section */}
+                                        <div className="bg-red-50 rounded-xl p-6 border-l-4 border-red-400">
+                                            <h3 className="text-lg font-bold text-red-800 mb-4 flex items-center">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                                                    <span className="text-red-600 font-bold">B</span>
+                                                </div>
+                                                Before the Program
+                                            </h3>
+                                            <blockquote className="text-red-700 italic mb-4 text-sm leading-relaxed">
+                                                "{story.before.quote}"
+                                            </blockquote>
+                                            <div className="space-y-2">
+                                                <h4 className="font-semibold text-red-800 text-sm mb-2">Key Challenges:</h4>
+                                                {story.before.challenges.map((challenge, index) => (
+                                                    <div key={index} className="flex items-start text-sm text-red-700">
+                                                        <div className="w-2 h-2 bg-red-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                                        <span>{challenge}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
-                                        <div className="flex items-center text-sm text-gray-600">
-                                            <Briefcase className="w-4 h-4 mr-2 text-gray-400" />
-                                            {story.currentRole}
+
+                                        {/* After Section */}
+                                        <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-400">
+                                            <h3 className="text-lg font-bold text-green-800 mb-4 flex items-center">
+                                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                                    <span className="text-green-600 font-bold">A</span>
+                                                </div>
+                                                After the Program
+                                            </h3>
+                                            <blockquote className="text-green-700 italic mb-4 text-sm leading-relaxed">
+                                                "{story.after.quote}"
+                                            </blockquote>
+                                            <div className="space-y-2">
+                                                <h4 className="font-semibold text-green-800 text-sm mb-2">Key Achievements:</h4>
+                                                {story.after.achievements.map((achievement, index) => (
+                                                    <div key={index} className="flex items-start text-sm text-green-700">
+                                                        <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                                        <span>{achievement}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
 
-                                    {/* Key Achievements */}
-                                    <div className="mb-6">
-                                        <h4 className="font-semibold text-gray-900 mb-2 text-sm">Key Achievements:</h4>
-                                        <ul className="space-y-1">
-                                            {story.after.achievements.slice(0, 2).map((achievement, index) => (
-                                                <li key={index} className="text-xs text-gray-600 flex items-start">
-                                                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
-                                                    {achievement}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-
-                                    {/* Community Impact */}
-                                    <div className="bg-green-50 rounded-lg p-3 mb-4">
-                                        <div className="flex items-center mb-1">
-                                            <Heart className="w-4 h-4 text-green-600 mr-1" />
-                                            <span className="text-xs font-medium text-green-800">Community Impact</span>
+                                    {/* Community Impact & Testimonial */}
+                                    <div className="space-y-6">
+                                        {/* Community Impact */}
+                                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100">
+                                            <div className="flex items-center mb-4">
+                                                <Heart className="w-6 h-6 text-purple-600 mr-3" />
+                                                <h4 className="font-bold text-purple-800">Community Impact</h4>
+                                            </div>
+                                            <p className="text-purple-700 leading-relaxed">{story.communityImpact}</p>
+                                            <div className="mt-4 text-sm text-purple-600 font-medium">
+                                                Current Impact: {story.after.currentImpact}
+                                            </div>
                                         </div>
-                                        <p className="text-xs text-green-700">{story.communityImpact}</p>
-                                    </div>
 
-                                    <button 
-                                        onClick={() => setSelectedStory(story)}
-                                        className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-                                    >
-                                        Read Full Story
-                                        <ArrowRight className="ml-2 w-4 h-4" />
-                                    </button>
+                                        {/* Final Testimonial */}
+                                        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-6 border-l-4 border-blue-400">
+                                            <div className="flex items-start">
+                                                <div className="text-4xl text-blue-400 mr-4">"</div>
+                                                <div>
+                                                    <blockquote className="text-gray-700 italic text-lg leading-relaxed mb-4">
+                                                        {story.testimonial}
+                                                    </blockquote>
+                                                    <cite className="text-gray-600 font-medium">— {story.name}</cite>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
 
                     {filteredStories.length === 0 && (
-                        <div className="text-center py-12">
-                            <div className="text-gray-400 mb-4">
-                                <Users className="w-16 h-16 mx-auto" />
+                        <div className="text-center py-16">
+                            <div className="text-gray-400 mb-6">
+                                <Users className="w-24 h-24 mx-auto" />
                             </div>
-                            <h3 className="text-lg font-medium text-gray-900 mb-2">No stories found</h3>
-                            <p className="text-gray-600">Try adjusting your filters or search terms.</p>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">No stories found</h3>
+                            <p className="text-gray-600 text-lg">Try adjusting your filters or search terms to discover more inspiring journeys.</p>
                         </div>
                     )}
                 </div>
-            </div>
+            </div>                     
 
             {/* Call to Action */}
             <div className="mt-16 text-center">
