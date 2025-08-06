@@ -282,7 +282,7 @@ const SuccessStoriesPage = () => {
 
 
     return (
-        <div className="min-h-screen bg-gray-50 py-20">
+        <div className="min-h-screen relative bg-gradient-to-br from-blue-100 via-white to-blue-100 overflow-hidden py-20">
             {/* Hero Section */}
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">
