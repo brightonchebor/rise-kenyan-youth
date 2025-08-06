@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ArrowRight, 
-  Play, 
-  Users, 
-  GraduationCap,
-  BookOpen,
-  Trophy,
-  MapPin,
-  Heart
+import {
+    ArrowRight,
+    Play,
+    Users,
+    GraduationCap,
+    BookOpen,
+    Trophy,
+    MapPin,
+    Heart
 } from 'lucide-react';
 import background from '../assets/background.jpg';
 import chebor from '../assets/chebor.jpg';
@@ -93,10 +93,10 @@ const Hero = () => {
                 <div className="pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-28">
 
                     <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-start">
-                        
+
                         {/* Left Column - Main Content */}
                         <div className="lg:col-span-6">
-                            
+
                             {/* Main Headline */}
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                                 Empowering
@@ -108,8 +108,8 @@ const Hero = () => {
 
                             {/* Subheadline */}
                             <p className="mt-6 text-xl text-gray-600 leading-relaxed max-w-2xl">
-                                Breaking barriers through education, technology training, and mentorship. 
-                                We provide scholarships, life skills, and opportunities that transform 
+                                Breaking barriers through education, technology training, and mentorship.
+                                We provide scholarships, life skills, and opportunities that transform
                                 lives and strengthen communities across Kenya.
                             </p>
 
@@ -147,8 +147,8 @@ const Hero = () => {
                                     View Programs
                                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
                                 </button>
-                                
-                                <button 
+
+                                <button
                                     className="group bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 flex items-center justify-center"
                                 >
                                     <Play className="mr-2 h-5 w-5 text-blue-600" />
@@ -174,16 +174,16 @@ const Hero = () => {
 
                         {/* Right Column - Visual Content */}
                         <div className="mt-16 lg:mt-0 lg:col-span-6 space-y-8">
-                            
+
                             {/* Main Image/Video Container - Moved Up */}
                             <div className="relative">
                                 <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                                    <img 
+                                    <img
                                         src={background}
-                                        alt="Students in classroom learning technology" 
+                                        alt="Students in classroom learning technology"
                                         className="w-full h-auto"
                                     />
-                                    
+
                                     {/* Floating Impact Cards */}
                                     <div className="absolute -top-4 -left-4 bg-white rounded-lg shadow-lg p-4 transform -rotate-3">
                                         <div className="flex items-center">
@@ -210,8 +210,8 @@ const Hero = () => {
                             {/* Floating Success Story - Separated and Aligned */}
                             <div className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-500">
                                 <div className="flex items-start">
-                                    <img 
-                                        src={successStories[currentStory].avatar} 
+                                    <img
+                                        src={successStories[currentStory].avatar}
                                         alt={successStories[currentStory].author}
                                         className="w-12 h-12 rounded-full flex-shrink-0"
                                     />
@@ -232,16 +232,15 @@ const Hero = () => {
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 {/* Story Dots */}
                                 <div className="flex justify-center mt-4 space-x-2">
                                     {successStories.map((_, index) => (
                                         <button
                                             key={index}
                                             onClick={() => setCurrentStory(index)}
-                                            className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                                                index === currentStory ? 'bg-blue-600' : 'bg-gray-300'
-                                            }`}
+                                            className={`w-2 h-2 rounded-full transition-colors duration-200 ${index === currentStory ? 'bg-blue-600' : 'bg-gray-300'
+                                                }`}
                                         />
                                     ))}
                                 </div>
@@ -274,6 +273,13 @@ const Hero = () => {
                                     </div>
                                 );
                             })}
+                        </div>
+                    </div>
+
+                    <div className="mt-24 pt-12 border-t border-gray-200">
+                        <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet The Staff</h2>
+                            <p className="text-gray-600 max-w-2xl mx-auto">Staff content coming soon...</p>
                         </div>
                     </div>
                 </div>
