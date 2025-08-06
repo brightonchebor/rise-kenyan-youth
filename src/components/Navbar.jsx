@@ -61,7 +61,7 @@ const Navbar = () => {
                         {/* Emergency Contact */}
                         <div className="flex items-center text-slate-600 text-sm bg-slate-50 px-3 py-2 rounded-lg">
                             <Phone className="h-4 w-4 mr-2 text-indigo-500" />
-                            <span className="font-medium">+254115081710</span>
+                            <span className="font-medium">+254710744699</span>
                         </div>
 
                         {/* Donate Button */}
