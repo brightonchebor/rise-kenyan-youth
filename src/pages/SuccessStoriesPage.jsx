@@ -326,33 +326,33 @@ const SuccessStoriesPage = () => {
                                                 <img
                                                     src={story.coverImage || story.avatar}
                                                     alt={story.name}
-                                                    className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl border border-gray-200"
+                                                    className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-full object-cover shadow-lg border border-gray-200"
                                                 />
                                             </div>
 
                                             {/* Content on Right */}
                                             <div className="flex-1 text-center lg:text-left">
-                                                <div className="space-y-6">
+                                                <div className="space-y-4">
                                                     <div>
-                                                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                                                        <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-2 leading-tight">
                                                             {story.name}
                                                         </h2>
-                                                        <p className="text-lg md:text-xl lg:text-2xl text-blue-600 font-medium mb-6">
+                                                        <p className="text-base md:text-lg text-blue-600 font-medium mb-4">
                                                             {story.title}
                                                         </p>
                                                     </div>
 
-                                                    <div className="flex flex-col sm:flex-row lg:flex-col gap-4 text-sm md:text-base text-gray-600 justify-center lg:justify-start">
-                                                        <div className="flex items-center gap-3">
-                                                            <div className="p-2 bg-blue-100 rounded-lg">
-                                                                <MapPin className="w-6 h-6 text-blue-600" />
+                                                    <div className="flex flex-col sm:flex-row lg:flex-col gap-3 text-sm text-gray-600 justify-center lg:justify-start">
+                                                        <div className="flex items-center gap-2">
+                                                            <div className="p-1.5 bg-blue-100 rounded-lg">
+                                                                <MapPin className="w-4 h-4 text-blue-600" />
                                                             </div>
                                                             <span className="font-medium">{story.location}</span>
                                                         </div>
 
-                                                        <div className="flex items-center gap-3">
-                                                            <div className="p-2 bg-blue-100 rounded-lg">
-                                                                <Briefcase className="w-6 h-6 text-blue-600" />
+                                                        <div className="flex items-center gap-2">
+                                                            <div className="p-1.5 bg-blue-100 rounded-lg">
+                                                                <Briefcase className="w-4 h-4 text-blue-600" />
                                                             </div>
                                                             <span className="font-medium">{story.currentRole}</span>
                                                         </div>

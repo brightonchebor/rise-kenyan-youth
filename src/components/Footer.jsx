@@ -101,19 +101,19 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center text-gray-200">
                   <Mail className="h-5 w-5 mr-3 text-white" />
-                  <span>info@rikeyoyouth.org</span>
+                  <span>risekenyanyouth@gmail.com</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Phone className="h-5 w-5 mr-3 text-white" />
-                  <span>+254 712 345 678</span>
+                  <span>+254710744699</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <MapPin className="h-5 w-5 mr-3 text-white" />
-                  <span>Nairobi, Kenya</span>
+                  <span>Bungoma, Kenya</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Clock className="h-5 w-5 mr-3 text-white" />
-                  <span>Mon-Fri: 8:00 AM - 6:00 PM</span>
+                  <span>Mon-Sat: 11:00 AM - 6:00 PM</span>
                 </div>
               </div>
             </div>
