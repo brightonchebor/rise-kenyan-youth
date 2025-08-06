@@ -138,7 +138,7 @@ const ProgramsPage = () => {
     const currentProgram = programs[activeProgram];
 
     return (
-        <section id="programs" className="py-20 bg-white">
+        <section id="programs" className="py-20 relative bg-gradient-to-br from-blue-100 via-white to-blue-100 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Section Header */}
