@@ -260,7 +260,7 @@ const ProgramsPage = () => {
                                 </div>
 
                                 {/* Stats */}
-                                <div className="mt-8 pt-6 border-t border-gray-200">
+                                {/* <div className="mt-8 pt-6 border-t border-gray-200">
                                     <div className="grid grid-cols-3 gap-6">
                                         <div className="text-center">
                                             <div className="text-2xl font-bold text-gray-900 mb-1">
@@ -281,7 +281,7 @@ const ProgramsPage = () => {
                                             <div className="text-sm text-gray-600">Locations</div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 {/* Action Buttons */}
                                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
