@@ -318,7 +318,7 @@ const SuccessStoriesPage = () => {
                         {filteredStories.map((story) => (
                             <div key={story.id} className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
                                 {/* Hero Section */}
-                                <div className="relative bg-gradient-to-r from-slate-50 to-white py-8 px-8">
+                                <div className="relative bg-gradient-to-r from-slate-50 to-white py-1 px-8">
                                     <div className="max-w-6xl mx-auto">
                                         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                                             {/* Large Image on Left */}

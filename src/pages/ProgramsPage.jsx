@@ -10,8 +10,10 @@ import {
   MapPin,
   BookOpen
 } from 'lucide-react';
-import bukokholo1 from '../assets/bukokholo1.jpg';
-import bukokholo2 from '../assets/bukokholo2.jpg';
+import bukokholo1 from '../assets/gallery/image79.jpg';
+import bukokholo2 from '../assets/gallery/image87.jpg';
+import bukokholo3 from '../assets/gallery/image72.jpg';
+import bukokholo4 from '../assets/gallery/image37.jpg';
 
 const ProgramsPage = () => {
     const [activeProgram, setActiveProgram] = useState(0);
@@ -102,7 +104,7 @@ const ProgramsPage = () => {
                 'Commitment to 6-month program',
                 'Post-training service agreement'
             ],
-            image: bukokholo1
+            image: bukokholo3
         },
         {
             id: 'youth-development',
@@ -131,7 +133,7 @@ const ProgramsPage = () => {
                 'Regular participation commitment',
                 'Parent/guardian consent (minors)'
             ],
-            image: bukokholo2
+            image: bukokholo4
         }
     ];
 
