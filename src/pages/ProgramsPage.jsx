@@ -35,11 +35,6 @@ const ProgramsPage = () => {
                 'Academic mentorship',
                 'Parent engagement workshops'
             ],
-            stats: {
-                beneficiaries: '1,200+',
-                success_rate: '95%',
-                locations: '25 Schools'
-            },
             eligibility: [
                 'Family income below poverty line',
                 'Academic potential demonstrated',
@@ -93,11 +88,6 @@ const ProgramsPage = () => {
                 'Entrepreneurship workshops',
                 'Job placement assistance'
             ],
-            stats: {
-                beneficiaries: '500+',
-                success_rate: '88%',
-                locations: '8 Centers'
-            },
             eligibility: [
                 'Age 16-35 years',
                 'Basic literacy skills',
@@ -122,11 +112,6 @@ const ProgramsPage = () => {
                 'Community service projects',
                 'Peer mentorship networks'
             ],
-            stats: {
-                beneficiaries: '10+',
-                success_rate: '85%',
-                locations: '15 Centers'
-            },
             eligibility: [
                 'Age 12-25 years',
                 'Community residence',
@@ -259,29 +244,6 @@ const ProgramsPage = () => {
                                     </div>
                                 </div>
 
-                                {/* Stats */}
-                                {/* <div className="mt-8 pt-6 border-t border-gray-200">
-                                    <div className="grid grid-cols-3 gap-6">
-                                        <div className="text-center">
-                                            <div className="text-2xl font-bold text-gray-900 mb-1">
-                                                {currentProgram.stats.beneficiaries}
-                                            </div>
-                                            <div className="text-sm text-gray-600">Beneficiaries</div>
-                                        </div>
-                                        <div className="text-center">
-                                            <div className="text-2xl font-bold text-gray-900 mb-1">
-                                                {currentProgram.stats.success_rate}
-                                            </div>
-                                            <div className="text-sm text-gray-600">Success Rate</div>
-                                        </div>
-                                        <div className="text-center">
-                                            <div className="text-2xl font-bold text-gray-900 mb-1">
-                                                {currentProgram.stats.locations}
-                                            </div>
-                                            <div className="text-sm text-gray-600">Locations</div>
-                                        </div>
-                                    </div>
-                                </div> */}
 
                                 {/* Action Buttons */}
                                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
