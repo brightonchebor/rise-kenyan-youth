@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { 
-  GraduationCap, 
-  Laptop, 
-  Users, 
-  Heart,
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  MapPin,
-  BookOpen
+import {
+    GraduationCap,
+    Laptop,
+    Users,
+    Heart,
+    ArrowRight,
+    CheckCircle,
+    Clock,
+    MapPin,
+    BookOpen
 } from 'lucide-react';
 import bukokholo1 from '../assets/gallery/image79.jpg';
 import bukokholo2 from '../assets/gallery/image87.jpg';
@@ -29,7 +29,6 @@ const ProgramsPage = () => {
             bgColor: 'bg-blue-50',
             borderColor: 'border-blue-200',
             features: [
-                'School fees coverage',
                 'Learning materials & uniforms',
                 'Nutritional support program',
                 'Academic mentorship',
@@ -53,17 +52,11 @@ const ProgramsPage = () => {
             bgColor: 'bg-purple-50',
             borderColor: 'border-purple-200',
             features: [
-                'Full tuition & boarding costs',
                 'University preparation classes',
                 'Career guidance counseling',
                 'Leadership development',
                 'Alumni mentorship network'
             ],
-            stats: {
-                beneficiaries: '800+',
-                success_rate: '92%',
-                locations: '45 Schools'
-            },
             eligibility: [
                 'KCPE score of 300+ marks',
                 'Financial need demonstrated',
@@ -86,7 +79,6 @@ const ProgramsPage = () => {
                 'Web development & coding',
                 'Digital marketing training',
                 'Entrepreneurship workshops',
-                'Job placement assistance'
             ],
             eligibility: [
                 'Age 16-35 years',
@@ -108,7 +100,6 @@ const ProgramsPage = () => {
             features: [
                 'Leadership & life skills training',
                 'Sports & recreation programs',
-                'Arts & cultural activities',
                 'Community service projects',
                 'Peer mentorship networks'
             ],
@@ -127,36 +118,35 @@ const ProgramsPage = () => {
     return (
         <section id="programs" className="py-20 relative bg-gradient-to-br from-blue-100 via-white to-blue-100 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">
                         Our Programs
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Comprehensive educational and development programs designed to break the cycle of poverty 
+                        Comprehensive educational and development programs designed to break the cycle of poverty
                         and create lasting change in Kenyan communities.
                     </p>
                 </div>
 
                 <div className="grid lg:grid-cols-12 gap-8 lg:items-start">
-                    
+
                     {/* Program Navigation */}
                     <div className="lg:col-span-4">
                         <div className="space-y-4 lg:sticky lg:top-8">
                             {programs.map((program, index) => {
                                 const IconComponent = program.icon;
                                 const isActive = index === activeProgram;
-                                
+
                                 return (
                                     <button
                                         key={program.id}
                                         onClick={() => setActiveProgram(index)}
-                                        className={`w-full text-left p-8 rounded-xl border-2 transition-all duration-300 min-h-[140px] flex items-center ${
-                                            isActive 
-                                                ? `${program.bgColor} ${program.borderColor} shadow-lg` 
-                                                : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
-                                        }`}
+                                        className={`w-full text-left p-8 rounded-xl border-2 transition-all duration-300 min-h-[140px] flex items-center ${isActive
+                                            ? `${program.bgColor} ${program.borderColor} shadow-lg`
+                                            : 'bg-gray-50 border-gray-200 hover:bg-gray-100'
+                                            }`}
                                     >
                                         <div className="flex items-start">
                                             <div className={`p-3 rounded-lg ${isActive ? 'bg-white' : 'bg-white'} mr-4`}>
@@ -169,14 +159,6 @@ const ProgramsPage = () => {
                                                 <p className={`text-sm ${isActive ? 'text-gray-600' : 'text-gray-500'}`}>
                                                     {program.subtitle}
                                                 </p>
-                                                <div className="flex items-center mt-2 space-x-4 text-xs">
-                                                    <span className={`${isActive ? 'text-gray-600' : 'text-gray-500'}`}>
-                                                        {program.stats.beneficiaries} served
-                                                    </span>
-                                                    <span className={`${isActive ? 'text-gray-600' : 'text-gray-500'}`}>
-                                                        {program.stats.success_rate} success rate
-                                                    </span>
-                                                </div>
                                             </div>
                                         </div>
                                     </button>
@@ -188,11 +170,11 @@ const ProgramsPage = () => {
                     {/* Program Details */}
                     <div className="lg:col-span-8">
                         <div className="bg-white rounded-2xl shadow-lg overflow-hidden min-h-full">
-                            
+
                             {/* Program Image */}
                             <div className="relative h-64 overflow-hidden">
-                                <img 
-                                    src={currentProgram.image} 
+                                <img
+                                    src={currentProgram.image}
                                     alt={currentProgram.title}
                                     className="w-full h-full object-cover"
                                 />
@@ -203,14 +185,14 @@ const ProgramsPage = () => {
 
                             {/* Program Content */}
                             <div className="p-8">
-                                
+
                                 {/* Description */}
                                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
                                     {currentProgram.description}
                                 </p>
 
                                 <div className="grid md:grid-cols-2 gap-8">
-                                    
+
                                     {/* Features */}
                                     <div>
                                         <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
@@ -246,13 +228,9 @@ const ProgramsPage = () => {
 
 
                                 {/* Action Buttons */}
-                                <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                                    <button className={`flex-1 bg-gradient-to-r ${currentProgram.color} hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center`}>
-                                        View all Programs
-                                        <ArrowRight className="ml-2 h-5 w-5" />
-                                    </button>
-                                    <button className="flex-1 bg-white border-2 border-gray-200 hover:border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
-                                        <Heart className="mr-2 h-5 w-5 text-red-500" />
+                                <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-center">
+                                    <button className={`sm:flex-none bg-gradient-to-r ${currentProgram.color} hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center`}>
+                                        <Heart className="mr-2 h-5 w-5 text-white" />
                                         Support This Program
                                     </button>
                                 </div>
@@ -268,7 +246,7 @@ const ProgramsPage = () => {
                             Ready to Transform Lives?
                         </h3>
                         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                            Whether you're looking to apply for a program or support our mission, 
+                            Whether you're looking to apply for a program or support our mission,
                             we're here to help you make a difference in the lives of Kenyan youth.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -276,7 +254,6 @@ const ProgramsPage = () => {
                                 <Heart className="mr-2 h-5 w-5" />
                                 Donate Now
                             </button>
-                            
                         </div>
                     </div>
                 </div>
