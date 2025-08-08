@@ -16,6 +16,7 @@ import edwin from '../assets/edwin.jpg';
 import laureta from '../assets/laureta.jpg';
 import laurian from '../assets/laurian.jpg';
 import elizabeth from '../assets/elizabeth.jpg';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     const [currentStory, setCurrentStory] = useState(0);
@@ -143,16 +144,20 @@ const Hero = () => {
 
                             {/* CTA Buttons */}
                             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                                <button className="group bg-blue-600  hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
-                                    View Programs
-                                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                                </button>
-                                <button
-                                    className="group bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 flex items-center justify-center"
-                                >
-                                    <Play className="mr-2 h-5 w-5 text-blue-600" />
-                                    View Gallery
-                                </button>
+                                <Link to="/programs">
+                                    <button className="group bg-blue-600  hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center">
+                                        View Programs
+                                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                                    </button>
+                                </Link>
+                                <Link to="/gallery">
+                                    <button
+                                        className="group bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 flex items-center justify-center"
+                                    >
+                                        <Play className="mr-2 h-5 w-5 text-blue-600" />
+                                        View Gallery
+                                    </button>
+                                </Link>
                             </div>
 
                             {/* Community Impact */}
