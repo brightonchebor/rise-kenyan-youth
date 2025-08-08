@@ -6,49 +6,49 @@ const GalleryPage = () => {
   const galleryImages = [
     {
       id: 1,
-      url: 'src/assets/gallery/image26.jpg',
+      url: 'src/assets/gallery/image52.jpg',
       title: 'Technology Training Session',
       category: 'technology',
       description: 'Students learning digital skills and computer literacy'
     },
     {
       id: 2,
-      url: 'src/assets/gallery/image42.jpg',
+      url: 'src/assets/gallery/image86.jpg',
       title: 'Graduation Ceremony',
       category: 'graduation',
       description: 'Celebrating our successful graduates'
     },
     {
       id: 3,
-      url: 'src/assets/gallery/image18.jpg',
+      url: 'src/assets/gallery/image83.jpg',
       title: 'Community Workshop',
       category: 'community',
       description: 'Engaging with local communities for sustainable development'
     },
     {
       id: 4,
-      url: 'src/assets/gallery/image10.jpg',
+      url: 'src/assets/gallery/image17.jpg',
       title: 'STEM Education Program',
       category: 'education',
       description: 'Hands-on science and mathematics learning'
     },
     {
       id: 5,
-      url: 'src/assets/gallery/image19.jpg',
+      url: 'src/assets/gallery/image79.jpg',
       title: 'Leadership Development',
       category: 'leadership',
       description: 'Building tomorrow\'s leaders through mentorship'
     },
     {
       id: 6,
-      url: 'src/assets/gallery/image36.jpg',
+      url: 'src/assets/gallery/image46.jpg',
       title: 'Digital Skills Training',
       category: 'technology',
       description: 'Advanced computer programming and web development'
     },
     {
       id: 7,
-      url: 'src/assets/gallery/image47.jpg',
+      url: 'src/assets/gallery/image58.jpg',
       title: 'Team Building Activities',
       category: 'community',
       description: 'Fostering collaboration and teamwork'
@@ -62,21 +62,21 @@ const GalleryPage = () => {
     },
     {
       id: 9,
-      url: 'src/assets/gallery/image16.jpg',
+      url: 'src/assets/gallery/image74.jpg',
       title: 'Classroom Learning',
       category: 'education',
       description: 'Interactive learning environment'
     },
     {
       id: 10,
-      url: 'src/assets/gallery/image21.jpg',
+      url: 'src/assets/gallery/image30.jpg',
       title: 'Youth Conference',
       category: 'leadership',
       description: 'Annual youth leadership conference'
     },
     {
       id: 11,
-      url: 'src/assets/gallery/image42.jpg',
+      url: 'src/assets/gallery/image13.jpg',
       title: 'Mobile Learning Lab',
       category: 'technology',
       description: 'Bringing technology to remote communities'
@@ -117,7 +117,7 @@ const GalleryPage = () => {
 
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {galleryImages.map((image) => (
             <div
               key={image.id}
